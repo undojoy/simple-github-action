@@ -1,6 +1,12 @@
 name: Run Shell Commands
 on: 
   workflow_dispatch:
+    inputs:
+      environment:
+        description: "请输入要部署的环境"
+        required: true
+        default: "staging"
+        type: string
 
 jobs:
   test:
