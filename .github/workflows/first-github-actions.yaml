@@ -3,13 +3,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  run-shell-command:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Echo a String
-        run: echo "hello first github action"
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo test
-        run: echo "test1"
+      - name: Echo Test
+        run: echo "job1"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo build
+        run: echo "job2"
