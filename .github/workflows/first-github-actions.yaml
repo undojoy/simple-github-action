@@ -8,3 +8,8 @@ jobs:
     steps:
       - name: Echo a String
         run: echo "hello first github action"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo test
+        run: echo "test1"
