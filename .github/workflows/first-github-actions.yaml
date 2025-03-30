@@ -1,13 +1,16 @@
 name: Run Shell Commands
-on: 
+on:
   workflow_dispatch:
     inputs:
       environment:
-        description: "请输入要部署的环境"
+        description: "选择要部署的环境"
         required: true
-        default: "staging"
-        type: string
-
+        type: choice
+        options:
+          - staging
+          - production
+          - testing
+        default: staging
 jobs:
   test:
     runs-on: ubuntu-latest
