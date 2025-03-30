@@ -22,3 +22,8 @@ jobs:
     steps:
       - name: Echo build
         run: echo "job2"
+  echo-env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Env
+        run: echo ${{github.event.inputs.environment}}
